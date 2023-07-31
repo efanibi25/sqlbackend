@@ -11,9 +11,8 @@ router.get('/', function(req, res, next) {
 
 
 router.post('/generate', async(req, res)=> {
-  let data=await sqlconvert()
-  // let data=await sqlconvert("test input")
-  res.send("d");
+  let data=await sqlconvert("example query to add a row to a sql table")
+  res.send(data)
 });
 
 
